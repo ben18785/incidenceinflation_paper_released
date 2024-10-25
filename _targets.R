@@ -30,10 +30,10 @@ source("src/r/beta_binomial_noise.R")
 
 # global parameters
 n_iterations <- 200
-niterations_step_down <- n_iterations
+niterations_step_down <- 3000
 niterations_step_down_stan <- 2000
-niterations_measles <- 1000
-niterations_dengue <- 600
+niterations_measles <- 4000
+niterations_dengue <- 2000
 niterations_resurgence <- 2000
 
 # Replace the target list below with your own:
@@ -42,16 +42,18 @@ list(
   # targets used in publication
   tar_target(ultimate_targets, {
     list(
-      # file_plot_three_panel_step_down,
-      # file_plot_step_down_rt_estimates,
-         # file_plot_cases_dengue_combined,
-         # file_plot_cases_measles_combined,
-         file_plot_ebola_real_rt_noisy,
-         file_plot_ebola_real_rt_noisy_all,
-         file_plot_ebola_real_rt,
-         file_plot_ebola_real_rt_all,
-         file_plot_cases_ebola_noisy_combined,
-         file_plot_cases_ebola_combined
+        file_plot_three_panel_step_down,
+        file_plot_step_down_r_cases,
+        file_plot_cases_dengue_combined,
+        file_plot_dengue_r_estimates,
+        file_plot_cases_measles_combined,
+        file_plot_measles_r_estimates
+         # file_plot_ebola_real_rt_noisy,
+         # file_plot_ebola_real_rt_noisy_all,
+         # file_plot_ebola_real_rt,
+         # file_plot_ebola_real_rt_all,
+         # file_plot_cases_ebola_noisy_combined,
+         # file_plot_cases_ebola_combined
      )
   }),
   
@@ -347,6 +349,26 @@ list(
   # check convergence diagnostics
   tar_target(summary_mcmc_step_down_full,
              mcmc_summary(results_mcmc_step_down_full)),
+  tar_target(summary_mcmc_step_down_90,
+             mcmc_summary(results_mcmc_step_down_90)),
+  tar_target(summary_mcmc_step_down_80,
+             mcmc_summary(results_mcmc_step_down_80)),
+  tar_target(summary_mcmc_step_down_70,
+             mcmc_summary(results_mcmc_step_down_70)),
+  tar_target(summary_mcmc_step_down_60,
+             mcmc_summary(results_mcmc_step_down_60)),
+  tar_target(summary_mcmc_step_down_50,
+             mcmc_summary(results_mcmc_step_down_50)),
+  tar_target(summary_mcmc_step_down_all, {
+    list(
+      summary_mcmc_step_down_full,
+      summary_mcmc_step_down_90,
+      summary_mcmc_step_down_80,
+      summary_mcmc_step_down_70,
+      summary_mcmc_step_down_60,
+      summary_mcmc_step_down_50
+    )
+  }),
   
   ## plot covid results
   tar_target(cases_step_down_combined, {
@@ -1337,7 +1359,7 @@ list(
   }),
   tar_target(results_mcmc_measles_full, 
              fit_measles(130, measles_processed, measles_rt_index, measles_reporting_index,
-                         serial_parameters_measles, niterations_measles)),
+                         serial_parameters_measles, 6000)),
   tar_target(results_mcmc_measles_10, 
              fit_measles(130-10, measles_processed, measles_rt_index, measles_reporting_index,
                          serial_parameters_measles, niterations_measles)),
@@ -1346,13 +1368,13 @@ list(
                          serial_parameters_measles, niterations_measles)),
   tar_target(results_mcmc_measles_30, 
              fit_measles(130-30, measles_processed, measles_rt_index, measles_reporting_index,
-                         serial_parameters_measles, niterations_measles)),
+                         serial_parameters_measles, 6000)),
   tar_target(results_mcmc_measles_40, 
              fit_measles(130-40, measles_processed, measles_rt_index, measles_reporting_index,
-                         serial_parameters_measles, niterations_measles)),
+                         serial_parameters_measles, 6000)),
   tar_target(results_mcmc_measles_50, 
              fit_measles(130-50, measles_processed, measles_rt_index, measles_reporting_index,
-                         serial_parameters_measles, niterations_measles)),
+                         serial_parameters_measles, 6000)),
   tar_target(cases_measles_combined, {
     
     df_full <- results_mcmc_measles_full$cases %>% 
@@ -1431,8 +1453,22 @@ list(
              mcmc_summary(results_mcmc_measles_10)),
   tar_target(summary_mcmc_measles_20,
              mcmc_summary(results_mcmc_measles_20)),
+  tar_target(summary_mcmc_measles_30,
+             mcmc_summary(results_mcmc_measles_30)),
+  tar_target(summary_mcmc_measles_40,
+             mcmc_summary(results_mcmc_measles_40)),
   tar_target(summary_mcmc_measles_50,
              mcmc_summary(results_mcmc_measles_50)),
+  tar_target(summary_mcmc_measles_all, {
+    list(
+      summary_mcmc_measles_full,
+      summary_mcmc_measles_10,
+      summary_mcmc_measles_20,
+      summary_mcmc_measles_30,
+      summary_mcmc_measles_40,
+      summary_mcmc_measles_50
+    )
+  }),
   
   # fit simple Poisson renewal model to perfect case data and compare with
   # estimates from delay method
@@ -1649,6 +1685,7 @@ list(
     cols <- c(naive="#FF8C00", "gold standard"="black", incidenceinflation="#1B9E77")
     df %>% 
       ggplot(aes(x=date_onset, y=middle, fill=variant)) +
+        geom_hline(yintercept=1, linetype=2) +
         geom_ribbon(aes(ymin=lower, ymax=upper), alpha=0.4) +
         geom_line(aes(colour=variant)) +
         scale_color_manual("Estimator", values=cols) +
@@ -1781,7 +1818,7 @@ list(
                          left_join(dengue_reporting_index, by="time_onset") %>% 
                          select(-c(onset_week, report_week, n)),
                        serial_parameters_dengue,
-                       niterations=niterations_dengue)),
+                       niterations=4000)),
   tar_target(results_mcmc_dengue_10, 
              fit_model(dengue_processed %>% 
                          filter(time_reported <= (156 - 10)) %>% 
@@ -1848,12 +1885,36 @@ list(
                        niterations=niterations_dengue)),
   tar_target(summary_mcmc_dengue_full,
              mcmc_summary(results_mcmc_dengue_full)),
+  tar_target(summary_mcmc_dengue_10,
+             mcmc_summary(results_mcmc_dengue_10)),
   tar_target(summary_mcmc_dengue_20,
              mcmc_summary(results_mcmc_dengue_20)),
+  tar_target(summary_mcmc_dengue_30,
+             mcmc_summary(results_mcmc_dengue_30)),
   tar_target(summary_mcmc_dengue_40,
              mcmc_summary(results_mcmc_dengue_40)),
   tar_target(summary_mcmc_dengue_50,
              mcmc_summary(results_mcmc_dengue_50)),
+  tar_target(summary_mcmc_dengue_60,
+             mcmc_summary(results_mcmc_dengue_60)),
+  tar_target(summary_mcmc_dengue_70,
+             mcmc_summary(results_mcmc_dengue_70)),
+  tar_target(summary_mcmc_dengue_80,
+             mcmc_summary(results_mcmc_dengue_80)),
+  tar_target(summary_mcmc_dengue_all, {
+    list(
+      summary_mcmc_dengue_full,
+      summary_mcmc_dengue_80,
+      summary_mcmc_dengue_70,
+      summary_mcmc_dengue_60,
+      summary_mcmc_dengue_50,
+      summary_mcmc_dengue_40,
+      summary_mcmc_dengue_30,
+      summary_mcmc_dengue_20,
+      summary_mcmc_dengue_10
+    )
+  }),
+  
   tar_target(cases_dengue_true, {
     
     d <- dengue_processed %>% 
@@ -2100,6 +2161,7 @@ list(
     
     cols <- c(naive="#FF8C00", "gold standard"="black", incidenceinflation="#1B9E77")
     ggplot(df, aes(x=onset_week, y=middle, fill=variant)) +
+      geom_hline(yintercept=1, linetype=2) +
       geom_ribbon(aes(ymin=lower, ymax=upper), alpha=0.4) +
       geom_line(aes(colour=variant)) +
       scale_color_manual("Estimator", values=cols) +
@@ -2210,6 +2272,8 @@ list(
                                                 n_stan_iterations=10,
                                                 step_size=1e-3)
              }),
+  tar_target(summary_mcmc_measles_20_short_nb,
+             mcmc_summary_stan_uncertain_cases(fit_mcmc_measles_20_short_nb)),
   tar_target(opt_uncertain_cases_stan_step_down_up,
              fit_model_uncertain_cases_stan(data_sim_step_down_up %>% 
                                     select(-cases_true) %>% 
