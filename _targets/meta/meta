@@ -1,5 +1,5 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-.Random.seed|object|fbcc4d41265cc771|||||||||||||||
+.Random.seed|object|22606b9e0a5982e2|||||||||||||||
 cases_dengue_combined|stem|fc603e7ad66dc526|390dc43843d6a36e|0c99247b5b5bce1c|-1974888111||t20020.0762047701s|756bdeebc9440dff|24095761|rds|local|vector|||2.281||
 cases_dengue_true|stem|b5fafed9d541ceb4|20e0f56a52e44d91|a71d2174f130ccb1|1067701212||t19779.479507201s|c34d5299fca7b46f|3117|rds|local|vector|||0.32||
 cases_ebola_real_true|stem|04b049eb9a8d7f93|3378bce3809b1ad9|ae9d7fc3c8c7202a|1591576392||t19808.4779235486s|84de13d94e87c32e|9408|rds|local|vector|||0.206||
@@ -37,15 +37,20 @@ ebola_real_measles_combined|stem|80ed313b6617b645|a55ffcb81891a892|fecf5e012f3b3
 ebola_real_noisy_combined|stem|3d58f2ee76fea689|927643219bde79e8|dadfd28d3ead91e5|1634188298||t19808.4839307723s|a31fb83737d3f63b|644765|rds|local|vector|||0.746||
 ebola_rt_index|stem|e796141635634be6|1d7c9221cdd3483b|300504d9a34e7f15|1890581450||t19675.3696404966s|734eed8d6fa94b1a|434|rds|local|vector|||0.007||
 file_plot_cases_dengue_combined|stem|ed8a4ab448ce1614|9a0172da1e90ecfb|edc4acc6656f12ef|-1099094890||t20020.076459236s|dff9495c51b724c1|77|rds|local|vector|||0.355||
+file_plot_cases_dengue_combined_png|stem|0de73c29dafdd6b0|a3423251bd564c6f|edc4acc6656f12ef|-239124989||t20090.4750595493s|dff9495c51b724c1|77|rds|local|vector|||1.388||
 file_plot_cases_ebola_combined|stem|7fddcf3ca1548b9d|71c6bcd878118a08|842709bec091b429|2014487094||t19808.4868418024s|e655bbbdcbba1d63|81|rds|local|vector|||0.201||
 file_plot_cases_ebola_noisy_combined|stem|51f9f0eb64ac2e22|ba37ac3ef07e953d|360ad84b00ad5b1b|-2048995151||t19808.4868394423s|e7d9c43b1c994be3|87|rds|local|vector|||0.37||
 file_plot_cases_ebola_real_both|stem|7c4e7105477aef66|4301ee18d1f371c8|719c74ca886cf2b5|-982659288||t19808.6245717203s|b3654bf3682c79ca|86|rds|local|vector|||0.442||
 file_plot_cases_measles_combined|stem|227e1cc1421b66ee|cb91e990ddb4c9a4|fa07a1162d7a95ec|-401077672||t20020.8902622304s|c852eab37a726e04|78|rds|local|vector|||0.403||
+file_plot_cases_measles_combined_png|stem|255ba7fa685cb964|cf49a1f8a4912996|fa07a1162d7a95ec|-674518271||t20090.4744417413s|c852eab37a726e04|78|rds|local|vector|||1.491||
 file_plot_cases_reporting_delay_progress|stem|a4341a1d992bd8ec|c8ea2fec57d8ad45|89e190458876751a|-2008875481||t19770.6377492463s|3e4acf685da8f273|84|rds|local|vector|||0.278||
+file_plot_cases_reporting_delay_progress_png|stem|d505c45a07b20a76|886433511af5dba2|89e190458876751a|-651821629||t20090.4761454359s|3e4acf685da8f273|84|rds|local|vector|||1.325||
 file_plot_cases_resurgence_combined|stem|6ac6fbc92a2bcee7|6270e3a4e150ffa3|801cce20737965ba|550959530||t19674.7483770396s|6281f79619f6778a|80|rds|local|vector|||0.613|1m22mCombining variables of class factor and numeric was deprecated in ggplot23.4.0.36mℹ39m Please ensure your variables are compatible before plotting location  combine_vars. 1m22mCombining variables of class numeric and factor was deprecated in ggplot23.4.0.36mℹ39m Please ensure your variables are compatible before plotting location  combine_vars. 1m22mTransformation introduced infinite values in continuous yaxis|
 file_plot_cases_step_down_combined|stem|c1e3ee9f040506cf|200642df091365d6|b666b410972ad85e|2140691643||t19771.4920326637s|6281f79619f6778a|80|rds|local|vector|||0.556|1m22mCombining variables of class factor and numeric was deprecated in ggplot23.4.0.36mℹ39m Please ensure your variables are compatible before plotting location  combine_vars. 1m22mCombining variables of class numeric and factor was deprecated in ggplot23.4.0.36mℹ39m Please ensure your variables are compatible before plotting location  combine_vars. 1m22mTransformation introduced infinite values in continuous yaxis|
 file_plot_dengue_ecdf_number|stem|30435553fdc3f308|4676e07216cfa4dd|7a6a471bf2a4d245|1302317323||t19779.745514625s|abbdb7fe746336f0|76|rds|local|vector|||0.458||
+file_plot_dengue_ecdf_number_png|stem|a9cb81852d6ab414|ba5ec9bfa8eade9c|7a6a471bf2a4d245|-1197065850||t20090.475665657s|abbdb7fe746336f0|76|rds|local|vector|||1.567||
 file_plot_dengue_r_estimates|stem|b207a966ce1c2e72|075be2459f1ef6ab|209400414f344a12|1759807181||t20021.5480056838s|36500b95d6893aee|74|rds|local|vector|||0.646||
+file_plot_dengue_r_estimates_png|stem|d075b5479688dc0c|b7cecb51d4de8d12|209400414f344a12|-778609705||t20090.4732434094s|36500b95d6893aee|74|rds|local|vector|||2.144||
 file_plot_ebola_r_estimates|stem|8a3c3faa7e18585e|b091ce964d76c8f2|76695fb699e2ddd7|-142461955||t19676.3588109595s|bb4e721372eac6a0|88|rds|local|vector|||0.385||
 file_plot_ebola_real_rt|stem|cfb668dc4b766f5b|30368deae89641c0|2969f427c48321f4|-483625703||t19808.387360942s|c852eab37a726e04|78|rds|local|vector|||0.497||
 file_plot_ebola_real_rt_all|stem|8b2ea4181f7ca584|33b6c4ab5fc341be|0b5e787c3e0447bc|-622885426||t19808.4854400806s|0b52c5847220add9|82|rds|local|vector|||0.536||
@@ -53,18 +58,28 @@ file_plot_ebola_real_rt_both|stem|5e0bb33b67fcab21|9d19d442b8faab11|6d636709ddd4
 file_plot_ebola_real_rt_noisy|stem|b874d3fc86dbca43|46682b3fe19b93df|839dadac86601180|-196059454||t19808.3877391968s|3e4acf685da8f273|84|rds|local|vector|||0.502||
 file_plot_ebola_real_rt_noisy_all|stem|d586159efbff1ffd|f46ce11784727dd6|9fec6943eec66891|1008025572||t19808.485444907s|bb4e721372eac6a0|88|rds|local|vector|||0.287||
 file_plot_measles_cases_ecdf|stem|e29f4c9eb3acfbce|3df0b974ec160dc0|6ee35ead1f0bc99b|-361454983||t19779.6864874001s|0b52c5847220add9|82|rds|local|vector|||0.136||
+file_plot_measles_cases_ecdf_png|stem|02de0cd4cd622a8a|132e6fcb39213f11|fd13cacb2ee82646|609685825||t20090.479846029s|0b52c5847220add9|82|rds|local|vector|||3.346||
 file_plot_measles_delay|stem|027ab63d8c0b6d1f|fb87fcb2d4d44b0b|54dfd33229b69ab6|203258055||t19780.7435429671s|c852eab37a726e04|78|rds|local|vector|||0.383||
+file_plot_measles_delay_png|stem|65fd7edcd94c9175|9c31a4559f3bc95d|c0c7d05059e19b09|-373189430||t20090.480565294s|c852eab37a726e04|78|rds|local|vector|||1.372||
 file_plot_measles_ecdf|stem|1b26a3e6bfcf3a90|63547a197cb747b1|912ee40890f65dff|1045007675||t19779.6726397002s|dff9495c51b724c1|77|rds|local|vector|||0.451||
+file_plot_measles_ecdf_png|stem|40af312c41456c68|1627b92f5417e9f8|31c2a83617f8750b|1273903945||t20090.4809634188s|dff9495c51b724c1|77|rds|local|vector|||1.532||
 file_plot_measles_ecdfs_binomial_beta|stem|98a8f2afd6dd42c4|8cfe567d6a1bc92b|b131e359104162b7|170113001||t19783.4526157473s|b3654bf3682c79ca|86|rds|local|vector|||0.282||
+file_plot_measles_ecdfs_binomial_beta_png|stem|efc15db4d1e779f7|f20f76716a393973|b131e359104162b7|-1816348742||t20090.4793658256s|b3654bf3682c79ca|86|rds|local|vector|||1.256||
 file_plot_measles_misfit|stem|aa446dbf60afce28|3e8290a4803f92cb|eb802ebe64867bb3|1857017333||t19783.4288018757s|8619def19bb20a44|79|rds|local|vector|||0.164||
+file_plot_measles_misfit_png|stem|2226f40e4a1db99f|d1809257ac45eb66|eb802ebe64867bb3|403979028||t20090.4813608028s|8619def19bb20a44|79|rds|local|vector|||1.968||
 file_plot_measles_nb_vs_po|stem|9121ea766fb67b42|58a7550356f28028|5ac5f5bbcd392333|1831103604||t19783.5508602695s|0e696b453c03de61|85|rds|local|vector|||0.265||
+file_plot_measles_nb_vs_po_png|stem|0446192bdd5bd35e|7f001cac157f24dd|c8bd1a70f7fc67d1|-1663183718||t20090.4789503531s|0e696b453c03de61|85|rds|local|vector|||1.038||
 file_plot_measles_r_estimates|stem|3c4f2efaa436f6a3|1ff3f3c44eef1d4c|144a6d3234f73414|1651729089||t20021.5472481099s|ff026697d66e9a9f|75|rds|local|vector|||0.466||
+file_plot_measles_r_estimates_png|stem|fbf2aaaebbff7297|1efa1d4ce1ff3f26|144a6d3234f73414|-2021546567||t20090.4738819523s|ff026697d66e9a9f|75|rds|local|vector|||1.503||
 file_plot_measles_raw_data_delay|stem|3367e973e9111058|6cbdd16d205c3285|d9d41f4b884bb806|2070725728||t19663.4613609424s|3e4acf685da8f273|84|rds|local|vector|||0.209||
+file_plot_measles_raw_data_delay_png|stem|d8d5e90b0ed99087|4a52e19b649613c4|d9d41f4b884bb806|-1568699649||t20090.4815677279s|3e4acf685da8f273|84|rds|local|vector|||1.316||
 file_plot_projections_waning_over|stem|d60d119aaf8e4a71|0e2baa3a8b6e5368|39b3c8b4c3d1023d|-632238219||t19780.736660299s|40b3a10246f0095b|83|rds|local|vector|||0.467||
+file_plot_projections_waning_over_png|stem|b6bb3274fc42d05a|1a4187d01996e2fe|39b3c8b4c3d1023d|309237634||t20090.4833146242s|40b3a10246f0095b|83|rds|local|vector|||2.013||
 file_plot_reporting_delay_resurguence_combined|stem|f4b8c2ca8bd3aac0|2e6873d4a8950b83|278fd72be1a8f532|296871391||t19674.762165327s|e961a0bcff3caad6|91|rds|local|vector|||0.294||
 file_plot_reporting_delay_schematic|stem|a55bbb03d1f26df9|718810647750c1bf|8ff5cdd24fcb7778|-1151897550||t19782.4356324055s|3e4acf685da8f273|84|rds|local|vector|||0.172||
 file_plot_reporting_delay_step_down_combined|stem|854a07fd3aa5dc11|f4e3abf2ee7b9ce4|faba720c7032a9e5|-248080443||t19657.3526180935s|e961a0bcff3caad6|91|rds|local|vector|||0.393||
 file_plot_rt_and_cases_reporting_delay_progress|stem|921e7aaab5dc10dd|d7e2e970e1ab0571|9ba89b0ad253ac24|1806891536||t19770.66194105s|e961a0bcff3caad6|91|rds|local|vector|||0.134||
+file_plot_rt_and_cases_reporting_delay_progress_png|stem|8eb143e9c2894c0d|e2555d4c2efdabaf|9ba89b0ad253ac24|287265433||t20090.4773037884s|e961a0bcff3caad6|91|rds|local|vector|||2.418||
 file_plot_rt_resurgence_combined|stem|8827fc633314cd76|f494f5889a655ab9|ae79eae8b4ae7d31|-905220226||t19675.6508237375s|dff9495c51b724c1|77|rds|local|vector|||0.561||
 file_plot_rt_step_down_combined|stem|8accc94d598205c2|71e5988e95863154|33f647090f8ce47b|-680463654||t19656.7218730297s|dff9495c51b724c1|77|rds|local|vector|||0.25||
 file_plot_schematic_mcmc_cases|stem|39c87899ef181d67|d98ce38456f771d1|947093e9e1ab0c85|-1392381522||t19782.4400954618s|6281f79619f6778a|80|rds|local|vector|||0.22||
@@ -72,10 +87,14 @@ file_plot_schematic_rt|stem|a50e86729427dfe7|a23561705d8a78dd|db97291cd08d7518|1
 file_plot_schematic_top|stem|35e280b239ff0e92|0e089a6e2755034d|794f20e2cb7246a4|1977773389||t19782.4402729045s|c852eab37a726e04|78|rds|local|vector|||0.255||
 file_plot_schematic_trajectories|stem|b6a9ffe2917b52e8|b47eb0ce24eaa03e|2c6952740e81b974|-364982527||t19782.4401804006s|e7d9c43b1c994be3|87|rds|local|vector|||0.174||
 file_plot_step_down_r_cases|stem|33aa45031922ff5b|f054771788bfd9bd|3b956f5918ef40b0|-725278080||t20020.0765036588s|3e4acf685da8f273|84|rds|local|vector|||0.191||
+file_plot_step_down_r_cases_png|stem|754999e3b1848d88|a2a61296dfe7b0cd|3b956f5918ef40b0|820600889||t20090.4824876432s|3e4acf685da8f273|84|rds|local|vector|||3.183||
 file_plot_step_down_rt_estimates|stem|d88adc60dc9c56c9|cb07f446e4127901|6810097e2442ecab|-486314899||t19779.6675771475s|e961a0bcff3caad6|91|rds|local|vector|||0.559||
 file_plot_three_panel_shortening_ebola|stem|01fd145644e7e1d8|905e70cf77cb4054|2e1e8f9318c15ded|-154760818||t19781.4860884886s|17e1813002340629|93|rds|local|vector|||0.32||
+file_plot_three_panel_shortening_ebola_png|stem|3ee1256f4319ce28|01f2a907835b9fce|2e1e8f9318c15ded|-1579746361||t20090.4780462872s|17e1813002340629|93|rds|local|vector|||4.057||
 file_plot_three_panel_step_down|stem|a249abe157d6a445|559495cf6a95aad4|312049fcf362bcf2|1779943121||t20020.076505119s|b3654bf3682c79ca|86|rds|local|vector|||0.123||
+file_plot_three_panel_step_down_png|stem|b7819dee677818dd|385a399545a9846e|312049fcf362bcf2|873651046||t20090.4725476739s|b3654bf3682c79ca|86|rds|local|vector|||3.119||
 file_reporting_delay_progress_stacked|stem|48562db14d8c9bac|93eefdaa440952fe|52ac8fff51d7f442|438818202||t19770.6147616869s|dfd0d40dc0c5171b|95|rds|local|vector|||0.192||
+file_reporting_delay_progress_stacked_png|stem|dc95804180b46495|fa2863ea1f29db80|52ac8fff51d7f442|-92363910||t20090.4767145323s|dfd0d40dc0c5171b|95|rds|local|vector|||3.294||
 fit_both_stan|function|d6c26032c9a53755|||||||||||||||
 fit_both_stan_dengue|function|2b88695c7706d8da|||||||||||||||
 fit_both_stan_simple|function|3f87118aad43efdc|||||||||||||||
@@ -270,14 +289,14 @@ plot_ebola_real_rt_all|stem|53e91207e7b4a5c0|94b21112775b430b|2726e5250290f017|-
 plot_ebola_real_rt_both|stem|644eb5645bca746f|a902504e5a0ac478|581e48b774144059|-977068490||t19808.6112560585s|9ac84d5e42ea5b80|622989|rds|local|vector|||0.067||
 plot_ebola_real_rt_noisy|stem|887a776b512072bb|24c207ac24512f5d|0be28cf832348b77|-1921919437||t19808.3877332934s|e8148ff48a6b75b3|609041|rds|local|vector|||0.26|1m22mDetected an unexpected manytomany relationship between x and y.36mℹ39m Row 1 of x matches multiple rows in y.36mℹ39m Row 1 of y matches multiple rows in x.36mℹ39m If a manytomany relationship is expected, set relationship   manytomany to silence this warning.|
 plot_ebola_real_rt_noisy_all|stem|575085736b817536|0740ebca837bb05b|259c8a257c471b09|716967942||t19808.6070245492s|85729a2b8901226d|588396|rds|local|vector|||0.058||
-plot_measles_cases_ecdf|stem|fc1f6149a1af4d6b|02de0bf0ad032b00|0d40f2d53d3ea84f|1767158455||t19779.6864857783s|11752e7f4d9dadae|1008530|rds|local|vector|||0.424||
+plot_measles_cases_ecdf|stem|7f498e61bd981cd7|02de0bf0ad032b00|f0ad906973484cf6|1767158455||t20090.4798072281s|75441d9411481de7|1091400|rds|local|vector|||0.35||
 plot_measles_cases_simple|stem|e07ee2d5de95bf7a|b7b7502e7c0d1098|6c0f2b9d6317ab08|-928533537||t19779.748948568s|a51c026c06e27660|370890|rds|local|vector|||0.174||
-plot_measles_delay|stem|7b9afc8bab87c26b|2ea859db9e402934|2a4105e7d8e9ae8e|789855632||t19780.7432728409s|6fd6d739296c3503|112466|rds|local|vector|||0.563|1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument label  toLowerRomanreporting_piece_index.Caused by warning in if x  1  x  20 ...33m39m the condition has length  1 and only the first element will be used. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument label  toLowerRomanreporting_piece_index.Caused by warning in if x  1  x  20 ...33m39m the condition has length  1 and only the first element will be used. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument label  toLowerRomanreporting_piece_index.Caused by warning in if x  1  x  20 ...33m39m the condition has length  1 and only the first element will be used|
+plot_measles_delay|stem|0ba70eb41b21f770|2ea859db9e402934|d5f272013e95c91d|789855632||t20090.4805493448s|6bde26da15c40cbd|229175|rds|local|vector|||0.653|1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument label  toLowerRomanreporting_piece_index.Caused by warning in if x  1  x  20 ...33m39m the condition has length  1 and only the first element will be used. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument label  toLowerRomanreporting_piece_index.Caused by warning in if x  1  x  20 ...33m39m the condition has length  1 and only the first element will be used. 1m22mThere was 1 warning in mutate.1m22m36mℹ39m In argument label  toLowerRomanreporting_piece_index.Caused by warning in if x  1  x  20 ...33m39m the condition has length  1 and only the first element will be used|
 plot_measles_delay_stan_ecdf|stem|7c52c31a040ff726|785b7788571c4d31|0d04a0e238ddb1b5|-1082955240||t19783.452612432s|b940d35b3937e75d|677870|rds|local|vector|||0.207||
 plot_measles_ecdf|stem|358c6b9abf14b38d|26ae492e5ac37a5d|58409fc4445c43ff|1755450450||t19779.685428619s|119bcfa2e1849923|426257|rds|local|vector|||0.176|collapsing to unique x values. collapsing to unique x values. collapsing to unique x values|
 plot_measles_ecdf_absolute|stem|2051206ca2db69ba|0e677b3252e5c973|93bc8b2fe1b3c3a7|1053723669||t19783.4270863144s|16c84558bdd57852|382247|rds|local|vector|||0.087||
 plot_measles_misfit|stem|bb598aee8e0a7fb4|59a441f00f7e26c9|b82c728f7dcdbd4d|-1463241245||t19783.4287999144s|01f6d58253991cc5|1102425|rds|local|vector|||0.578||
-plot_measles_nb_vs_po|stem|c0fc5af0256e5ff4|df3865234afd6a94|85728860cfa50503|-2039152500||t19783.5508571194s|99ebfff06fce4a6f|1144440|rds|local|vector|||0.219||
+plot_measles_nb_vs_po|stem|f79deb70d5913772|df3865234afd6a94|a00045de969f6053|-2039152500||t20090.4789382608s|b893650c817f033a|3259758|rds|local|vector|||0.535||
 plot_measles_r_estimates|stem|92f0842dc6cc765b|18b9b8438b63e1cc|2312cd39da14c6a8|-2121600127||t20021.5472426576s|eb618ae241b0b642|574778|rds|local|vector|||0.176||
 plot_measles_raw_data_delay|stem|d2c8b9331473260a|99476166800c75f2|ef46db3751d8e999|1919097431||t19663.4613583688s|d34985754b5b0468|165239|rds|local|vector|||1.287||
 plot_misfit_cases_per_day|stem|4d18c3f57d051bf5|d98e967bf0e9d58b|a71fc374e57f3e30|-1003504742||t19783.4287881014s|8015711a82df4e77|451925|rds|local|vector|||0.04||
@@ -306,7 +325,7 @@ plot_schematic_top|stem|a775a9e69e6b84a0|1fa0b7f98a5150fb|0601abcee6cfb1c9|-8064
 plot_schematic_trajectories|stem|cadbc37c453b3615|907448f9706360a9|70dd84088d5c8b6e|-930353092||t19782.4401783274s|ce8ce2631b0454dc|388102|rds|local|vector|||0.044||
 plot_shortening_ebola_full_cases|stem|cfa8fba530f3f70d|7580625083d731c2|a2993c135777ebab|-1688471418||t19781.4833982963s|435b418ba3b0afa6|400989|rds|local|vector|||0.075||
 plot_shortening_ebola_full_delay|stem|b76374d924024f65|8e90f1c836b01a8c|6cb3d3ac3a665e12|-1941268271||t19769.7190378063s|ada73af2d404cd0c|255379|rds|local|vector|||0.038||
-plot_shortening_ebola_full_delay_1|stem|e1c86f8be3c96a54|1b47a0adbe980a94|6cb3d3ac3a665e12|-2002877863||t19781.4815197888s|70956e7e78331629|372005|rds|local|vector|||0.036||
+plot_shortening_ebola_full_delay_1|stem|e1c86f8be3c96a54|1b47a0adbe980a94|6cb3d3ac3a665e12|-2002877863||t19781.4815197889s|70956e7e78331629|372005|rds|local|vector|||0.036||
 plot_step_down_r_cases|stem|c611e4c58701ca63|2d0d605cccda32b9|eb2056dea1fec82c|678205380||t20020.076488385s|af36aa8c3562ef7e|4712624|rds|local|vector|||0.513|1m22mCombining variables of class factor and numeric was deprecated in ggplot23.4.0.36mℹ39m Please ensure your variables are compatible before plotting location  combine_vars. 1m22mCombining variables of class numeric and factor was deprecated in ggplot23.4.0.36mℹ39m Please ensure your variables are compatible before plotting location  combine_vars. 1m22mTransformation introduced infinite values in continuous yaxis|
 plot_step_down_r_estimates|stem|448e86b030f80133|a0d789017f197948|488a87c5a04be85c|-111371477||t20020.0764527726s|a7d4a75bb457859c|518856|rds|local|vector|||0.039||
 plot_step_down_r_estimates_full|stem|c63f24f473206676|27870abdf27df457|488a87c5a04be85c|700931783||t20020.0764550845s|a723de23ea3f8f5d|538037|rds|local|vector|||0.026|1m22mIgnoring unknown aesthetics 32mfill39m|

@@ -719,6 +719,13 @@ list(
            width = 10, height = 8);
     filename
   }),
+  tar_target(file_plot_three_panel_step_down_png, {
+    filename <- "figures/step_down_three_panel.png"
+    ggsave(filename,
+           plot_three_panel_step_down,
+           width = 10, height = 8, dpi = 1000);
+    filename
+  }),
   
   tar_target(plot_step_down_r_estimates, {
     df <- step_down_rt_index %>% 
@@ -772,6 +779,13 @@ list(
     ggsave(filename,
            plot_step_down_r_cases,
            width = 10, height = 8);
+    filename
+  }),
+  tar_target(file_plot_step_down_r_cases_png, {
+    filename <- "figures/step_down_rt_rt_cases.png"
+    ggsave(filename,
+           plot_step_down_r_cases,
+           width = 10, height = 8, dpi=1000);
     filename
   }),
   
@@ -1015,6 +1029,13 @@ list(
            width = 12, height = 8);
     filename
   }),
+  tar_target(file_plot_three_panel_shortening_ebola_png, {
+    filename <- "figures/ebola_shortening_three_panel.png"
+    ggsave(filename,
+           plot_three_panel_shortening_ebola,
+           width = 12, height = 8, dpi=1000);
+    filename
+  }),
   
   ## try now allowing a reporting delay for different subperiods
   tar_target(reporting_parameters_shortening_one_value, {
@@ -1187,6 +1208,14 @@ list(
            width = 10, height = 8);
     filename
   }),
+  tar_target(file_reporting_delay_progress_stacked_png, {
+    
+    filename <- "figures/ebola_reporting_delays_progress.png"
+    ggsave(filename,
+           reporting_delay_progress_stacked,
+           width = 10, height = 8, dpi=1000);
+    filename
+  }),
   tar_target(plot_cases_reporting_delay_progress, {
     
     start_point <- 75
@@ -1237,6 +1266,14 @@ list(
     ggsave(filename,
            plot_cases_reporting_delay_progress,
            width = 10, height = 4);
+    filename
+  }),
+  tar_target(file_plot_cases_reporting_delay_progress_png, {
+    
+    filename <- "figures/ebola_cases_progress.png"
+    ggsave(filename,
+           plot_cases_reporting_delay_progress,
+           width = 10, height = 4, dpi=1000);
     filename
   }),
   tar_target(plot_rt_reporting_delay_progress, {
@@ -1291,6 +1328,14 @@ list(
     ggsave(filename,
            plot_rt_and_cases_reporting_delay_progress,
            width = 10, height = 6);
+    filename
+  }),
+  tar_target(file_plot_rt_and_cases_reporting_delay_progress_png, {
+    
+    filename <- "figures/ebola_rt_and_cases_progress.png"
+    ggsave(filename,
+           plot_rt_and_cases_reporting_delay_progress,
+           width = 10, height = 6, dpi=1000);
     filename
   }),
   
@@ -1445,6 +1490,13 @@ list(
     ggsave(filename,
            plot_cases_measles_combined,
            width = 10, height = 4);
+    filename
+  }),
+  tar_target(file_plot_cases_measles_combined_png, {
+    filename <- "figures/measles_cases.png"
+    ggsave(filename,
+           plot_cases_measles_combined,
+           width = 10, height = 4, dpi=1000);
     filename
   }),
   tar_target(summary_mcmc_measles_full,
@@ -1702,6 +1754,13 @@ list(
            width = 10, height = 4);
     filename
   }),
+  tar_target(file_plot_measles_r_estimates_png, {
+    filename <- "figures/measles_rt.png"
+    ggsave(filename,
+           plot_measles_r_estimates,
+           width = 10, height = 4, dpi=1000);
+    filename
+  }),
   tar_target(plot_measles_raw_data_delay, {
     incidenceinflation::measles_NL_2013 %>% 
       mutate(time_delay=time_reported-time_onset) %>%
@@ -1716,11 +1775,11 @@ list(
         text=element_text(size=16)
       )
   }),
-  tar_target(file_plot_measles_raw_data_delay, {
-    filename <- "figures/measles_netherlands.pdf"
+  tar_target(file_plot_measles_raw_data_delay_png, {
+    filename <- "figures/measles_netherlands.png"
     ggsave(filename,
            plot_measles_raw_data_delay,
-           width = 8, height = 6);
+           width = 8, height = 6, dpi=1000);
     filename
   }),
   tar_target(plot_measles_delay, plot_delay_time_varying(results_mcmc_measles_full$reporting)), 
@@ -1729,6 +1788,13 @@ list(
     ggsave(filename,
            plot_measles_delay,
            width = 8, height = 6);
+    filename
+  }),
+  tar_target(file_plot_measles_delay_png, {
+    filename <- "figures/measles_delay.png"
+    ggsave(filename,
+           plot_measles_delay,
+           width = 8, height = 6, dpi=1000);
     filename
   }),
   
@@ -1998,6 +2064,13 @@ list(
            width = 10, height = 4);
     filename
   }),
+  tar_target(file_plot_cases_dengue_combined_png, {
+    filename <- "figures/dengue_cases.png"
+    ggsave(filename,
+           plot_cases_dengue_combined,
+           width = 10, height = 4, dpi=1000);
+    filename
+  }),
   tar_target(dengue_processed_simple, {
     dengue_processed %>% 
       group_by(time_onset) %>% 
@@ -2179,6 +2252,14 @@ list(
            width = 10, height = 6);
     filename
   }),
+  tar_target(file_plot_dengue_r_estimates_png, {
+    filename <- "figures/dengue_rt.png"
+    ggsave(filename,
+           plot_dengue_r_estimates,
+           width = 10, height = 6, dpi=1000);
+    filename
+  }),
+  
   
   
   # using stan version
@@ -2472,6 +2553,13 @@ list(
            width = 8, height = 4);
     filename
   }),
+  tar_target(file_plot_measles_nb_vs_po_png, {
+    filename <- "figures/meales_nb_vs_poisson.png"
+    ggsave(filename,
+           plot_measles_nb_vs_po,
+           width = 8, height = 4, dpi=1000);
+    filename
+  }),
   
   # A waning epidemic
   tar_target(rt_waning, {
@@ -2617,6 +2705,13 @@ list(
            width = 10, height = 4);
     filename
   }),
+  tar_target(file_plot_projections_waning_over_png, {
+    filename <- "figures/projections_waning.png"
+    ggsave(filename,
+           plot_projections_waning_over,
+           width = 10, height = 4, dpi=1000);
+    filename
+  }),
   
   ## examining measles data in more depth
   tar_target(plot_measles_ecdf, {
@@ -2675,6 +2770,13 @@ list(
     ggsave(filename,
            plot_measles_ecdf,
            width = 10, height = 4);
+    filename
+  }),
+  tar_target(file_plot_measles_ecdf_png, {
+    filename <- "figures/measles_ecdf.png"
+    ggsave(filename,
+           plot_measles_ecdf,
+           width = 10, height = 4, dpi=1000);
     filename
   }),
   tar_target(measles_processed_dates, {
@@ -2758,6 +2860,13 @@ list(
     ggsave(filename,
            plot_measles_cases_ecdf,
            width = 10, height = 8);
+    filename
+  }),
+  tar_target(file_plot_measles_cases_ecdf_png, {
+    filename <- "figures/measles_cases_ecdf.png"
+    ggsave(filename,
+           plot_measles_cases_ecdf,
+           width = 10, height = 8, dpi=1000);
     filename
   }),
   
@@ -2881,6 +2990,13 @@ list(
            width = 10, height = 4);
     filename
   }),
+  tar_target(file_plot_measles_ecdfs_binomial_beta_png, {
+    filename <- "figures/measles_beta_binomial.png"
+    ggsave(filename,
+           plot_measles_delay_stan_ecdf,
+           width = 10, height = 4, dpi=1000);
+    filename
+  }),
   tar_target(measles_largest_cases, {
     
     df_big_cases <- measles_processed %>%
@@ -2999,6 +3115,13 @@ list(
            width = 10, height = 4);
     filename
   }),
+  tar_target(file_plot_measles_misfit_png, {
+    filename <- "figures/measles_misfit.png"
+    ggsave(filename,
+           plot_measles_misfit,
+           width = 10, height = 4, dpi=1000);
+    filename
+  }),
   
   # examining more dengue data in more depth
   tar_target(plot_dengue_ecdf_number, {
@@ -3056,6 +3179,13 @@ list(
     ggsave(filename,
            plot_dengue_ecdf_number,
            width = 10, height = 4);
+    filename
+  }),
+  tar_target(file_plot_dengue_ecdf_number_png, {
+    filename <- "figures/dengue_ecdf.png"
+    ggsave(filename,
+           plot_dengue_ecdf_number,
+           width = 10, height = 4, dpi=1000);
     filename
   }),
   tar_target(dengue_delay_stan, {
